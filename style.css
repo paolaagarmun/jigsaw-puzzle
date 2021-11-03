@@ -1,16 +1,11 @@
 body {
-<<<<<<< HEAD
     margin-top: 11em;
     /* margin-left: -30em; */
-    background-color: #ACE1AF;
     display: flex;
     justify-content: flex-start;
-}
 
-=======
     background-color: #ACE1AF
 } 
->>>>>>> 7d9fde87205d1167f45f8e1992445e33d010b689
 
 section {
     display: flex;
