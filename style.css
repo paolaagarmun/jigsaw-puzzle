@@ -1,6 +1,8 @@
-
+body {
+    background-color: #ACE1AF
+} 
 
 .selected {
-   border: 2px solid red !important;
+   border: 4px solid #aa381e !important;
       
 }

@@ -105,8 +105,8 @@ class Cell {
 
     getPositionFromIndex(index) {
         return {
-            left: (this.blockWidth + 10) * (index % this.puzzle.dimmension),
-            top: (this.blockHeight + 10) * (Math.floor(index / this.puzzle.dimmension))
+            left: (this.blockWidth + 8) * (index % this.puzzle.dimmension),
+            top: (this.blockHeight + 8) * (Math.floor(index / this.puzzle.dimmension))
         }
     }
 
