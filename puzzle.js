@@ -10,7 +10,7 @@ class PicturePuzzle {
         //parentElement => the whole image
         this.parentElement = el;
         //dimension of the puzzle (3x3)
-        this.dimmension = 3;
+        this.dimmension = 2;
         //imageSource => the source of the img
         this.imageSource = imageSource;
         //width => width of the entire image??? *****
@@ -61,14 +61,8 @@ class PicturePuzzle {
         console.log(this.cells)
 
         if (this.thePuzzleIsAssembled()) {
-            console.log('the puzzle is assembled!')
+            console.log('puzzle assembled')
         }
-
-        
-
-        //remove the red border
-        //this.cell[i].classList.remove('selected');
-        //this.cells.cellElement.classList.remove('selected');
 
     }
 
@@ -84,8 +78,7 @@ class PicturePuzzle {
     //creates main div 
     createWrapper() {
         const div = document.createElement('div');
-        
-        //whyy?????????????????????????????//
+
         div.style.position = 'relative';
         //this can be changed later
         div.style.margin = '0 auto';
