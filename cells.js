@@ -90,9 +90,6 @@ class Cell {
              this.cellElement.classList.add('selected');
            }     
 }
-            
-        
-    
     
 
     setPosition(index) {

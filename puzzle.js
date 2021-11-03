@@ -1,20 +1,16 @@
 class PicturePuzzle {
-    constructor (el, imageSource, width) {
+    constructor (el, imageSource) {
         this.firstClick;
         this.secondClick;
-
-        // I think this can be removed, it is not used. 
-        this.firstClickObj;
-        this.secondClickObj;
 
         //parentElement => the whole image
         this.parentElement = el;
         //dimension of the puzzle (3x3)
-        this.dimmension = 2;
+        this.dimmension = 3;
         //imageSource => the source of the img
         this.imageSource = imageSource;
         //width => width of the entire image??? *****
-        this.width = 600;
+        this.width = 800;
         this.cells = [];
 
         //once we have the measurements of the img create the canvas
@@ -72,7 +68,16 @@ class PicturePuzzle {
                 return false
             }
         }
+        showFinalImage()
         return true
+    }
+    showFinalImage() {
+        var img = document.createElement("img");
+        img.src = url('./images/26be0be164a62db8e7259a7211b9da48-you-did-it-lettering-quote.png');
+        // img.width = width;
+        // img.height = height;
+        // This next line will just add it to the <body> tag
+        document.body.appendChild(img);
     }
 
     //creates main div 
@@ -121,6 +126,22 @@ class PicturePuzzle {
       //this returns the # position that the current puzzle piece is 
     findPosition(ind) {
         return this.cells.findIndex(cell => cell.index === ind)
+    }
+
+    difficultyChoice () {
+        let choices = document.getElementsByTagName('select');
+        let choice = choices.value;
+        if (choice.value === 1) {
+            this.dimmension = 3
+        } 
+        if (choice.value === 2) {
+            this.dimmension = 5
+        }
+        if (choice.value === 3) {
+            this.dimmension = 8
+        }
+        console.log(choice);
+
     }
     
 }
