@@ -14,7 +14,7 @@ class PicturePuzzle {
         //imageSource => the source of the img
         this.imageSource = imageSource;
         //width => width of the entire image??? *****
-        this.width = width;
+        this.width = 600;
         this.cells = [];
 
         //once we have the measurements of the img create the canvas
