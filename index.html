@@ -7,19 +7,44 @@
     <link rel="stylesheet" href="./style.css">
     <title>Puzzle Game</title>
 </head>
-<body>
 
-    <button class="begin-game">Begin Puzzle</button>
-    <select id="choice">
-        <option value="1">One</option>
-        <option value="2">two</option>
-        <option value="3">three</option>
-    </select>
-    <div id="puzzle-wrapper"></div>
 
-    <section>
-        <img src="./images/Danaidae_Monarch_John_Jackman-M.jpeg" alt="" >
-    </section>
+    <header>
+        <img class = "puzzle-completed" src="./images/26be0be164a62db8e7259a7211b9da48-you-did-it-lettering-quote.png" alt="" >
+
+        <h1>One piece at a time ...</h1> 
+
+        <div class="start-container">
+            <div id="text">Select your difficulty level:</div>
+            <div id="difficulty-level">
+                <button class="diff-level" value=3 onclick="selectPuzzleDimmension(this.value)">3x3 - easy peasy</button>
+                <button class="diff-level" value=5 onclick="selectPuzzleDimmension(this.value)">5x5 - I like the challenge</button>
+                <button class="diff-level" value=10 onclick="selectPuzzleDimmension(this.value)">10x10 - I'm a puzzle expert</button>
+            </div>
+            <button class="start-game-btn active">I'm ready!</button>
+            <p id="num-of-clicks"></p>
+        </div>
+
+       
+    </header>
+    
+    
+
+
+<body id='body'>
+    
+    <div class="puzzle-space">
+        <div class="puzzle-mat">
+            <div id="puzzle-wrapper"></div>
+        </div>
+        
+        
+    
+        <section>
+            <img src="./images/Danaidae_Monarch_John_Jackman-M.jpeg" alt="" >
+        </section>
+    </div>
+    
     
     <script src="./puzzle.js"></script> 
     <script src="./cells.js"></script>

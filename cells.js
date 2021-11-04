@@ -9,7 +9,6 @@ class Cell {
         this.puzzle = puzzle;
         
         
-        this.isSelected = false;
         this.blockWidth = this.puzzle.width / this.puzzle.dimmension;
         this.blockHeight = this.puzzle.height / this.puzzle.dimmension;
 
@@ -17,8 +16,6 @@ class Cell {
         //append the child divs to the parent div
         puzzle.el.appendChild(this.cellElement);
 
-        
-       // this.clicked = clicked;
     }
 
 
@@ -62,7 +59,7 @@ class Cell {
                 
                 this.puzzle.firstClick = this;
                 //this.puzzle.firstClickObj = this;
-                this.isSelected = true;
+                
                 this.setBorderColor();
             } else {
                 this.puzzle.secondClick = this;
@@ -74,9 +71,10 @@ class Cell {
                 this.puzzle.firstClick = 0;
                 this.puzzle.secondClick = 0;
                 
-            }
-            
-            
+                
+
+            } 
+
             //  console.log('first click',this.puzzle.firstClickObj )
             // console.log('second click', this.puzzle.secondClickObj)
         }
@@ -85,11 +83,13 @@ class Cell {
     }
 
     setBorderColor() {
+        if (document.querySelector('.square') ) {
+        this.cellElement.classList.add('selected');
+        }     
+    }
+            
         
-          if (document.querySelector('.square') ) {
-             this.cellElement.classList.add('selected');
-           }     
-}
+    
     
 
     setPosition(index) {
@@ -102,8 +102,8 @@ class Cell {
 
     getPositionFromIndex(index) {
         return {
-            left: (this.blockWidth + 8) * (index % this.puzzle.dimmension),
-            top: (this.blockHeight + 8) * (Math.floor(index / this.puzzle.dimmension))
+            left: (this.blockWidth) * (index % this.puzzle.dimmension),
+            top: (this.blockHeight) * (Math.floor(index / this.puzzle.dimmension))
         }
     }
 

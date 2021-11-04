@@ -45,10 +45,15 @@
 
 Game add-ons to-do:
  1. removing space between divs when won
- 2. unselect the puzzle piece if it's clicked twice
+ 2. Get difficulty levels to work
+ 3. UI:
+    - get puzzle completed picture
  3. UI:
     - background image
     - start button
     - difficulty level
     
+
+
+    input boxes of tyoe pazzle
 

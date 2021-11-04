@@ -1,17 +1,18 @@
 class PicturePuzzle {
-    constructor (el, imageSource) {
+    constructor (el, imageSource, dimmension) {
         this.firstClick;
         this.secondClick;
 
         //parentElement => the whole image
         this.parentElement = el;
         //dimension of the puzzle (3x3)
-        this.dimmension = 3;
+        this.dimmension = dimmension;
         //imageSource => the source of the img
         this.imageSource = imageSource;
         //width => width of the entire image??? *****
-        this.width = 800;
+        this.width = 700;
         this.cells = [];
+        this.counter = 0;
 
         //once we have the measurements of the img create the canvas
         this.init();
@@ -42,24 +43,36 @@ class PicturePuzzle {
         this.el = this.createWrapper();
         //sub-divs are appended to the parent div
         this.parentElement.appendChild(this.el);
+    
     }
 
     // swapCells
     swapCells(i,j) {
-       
+        
         this.cells[i].setPosition(j,i);
         this.cells[j].setPosition(i);
         [this.cells[i], this.cells[j]] = [this.cells[j], this.cells[i]];
-
-        // this.firstClick = 0;
-        // this.secondClick =0;
-
-        console.log(this.cells)
+        
+        this.counter ++;
 
         if (this.thePuzzleIsAssembled()) {
             console.log('puzzle assembled')
-        }
+            console.log('num of clicks', this.counter)
+            
+            setTimeout(() => {
+                this.youDidItView();
+            }, 1000);
+            
+        } 
+        //console.log(this.cells)
+    }
 
+    youDidItView() {
+        let paragraph = document.getElementById("num-of-clicks");
+        paragraph.textContent += `You completed the puzzle in ${this.counter} clicks`; 
+        document.querySelector('#num-of-clicks').style.fontSize = "medium";
+        document.body.style.backgroundImage = "url('./images/Screen Shot 2021-11-03 at 8.46.51 PM.png')";
+        document.querySelector('.puzzle-completed').style.visibility = 'visible'
     }
 
     thePuzzleIsAssembled() {
@@ -68,17 +81,16 @@ class PicturePuzzle {
                 return false
             }
         }
-        showFinalImage()
         return true
     }
-    showFinalImage() {
-        var img = document.createElement("img");
-        img.src = url('./images/26be0be164a62db8e7259a7211b9da48-you-did-it-lettering-quote.png');
-        // img.width = width;
-        // img.height = height;
-        // This next line will just add it to the <body> tag
-        document.body.appendChild(img);
-    }
+
+    // showFinalImage() {
+    //     let img = document.createElement('img');
+    //     img.src = './images/26be0be164a62db8e7259a7211b9da48-you-did-it-lettering-quote.png'
+    //     document.getElementById('body').appendChild(img);
+    //     img.className = "image-congrats";
+    // }
+    
 
     //creates main div 
     createWrapper() {
