@@ -85,13 +85,14 @@ function selectPuzzleImg(val) {
 
 
 
-document.querySelector('#num-of-clicks').style.visibility = 'hidden'
+document.querySelector('.num-of-clicks-div').style.visibility = 'hidden'
 
 document.querySelector('.puzzle-mat').style.visibility = 'hidden'
 
 document.querySelector('.puzzle-completed').style.visibility = 'hidden'
 
 document.querySelector('#reference-img').style.visibility = 'hidden'
+
 
 document.querySelector('.start-game-btn').addEventListener('click', () => {
   document.querySelector('.start-game-btn').remove();

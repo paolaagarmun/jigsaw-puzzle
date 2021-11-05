@@ -72,7 +72,7 @@ class PicturePuzzle {
         paragraph.textContent += `You completed the puzzle in ${this.counter} clicks`; 
         document.body.style.backgroundImage = "url('./images/Screen Shot 2021-11-03 at 8.46.51 PM.png')";
         document.querySelector('.puzzle-completed').style.visibility = 'visible'
-        paragraph.style.visibility = 'visible';
+        document.querySelector('.num-of-clicks-div').style.visibility = 'visible';
     }
 
     thePuzzleIsAssembled() {
