@@ -15,6 +15,7 @@ header {
     justify-content: space-around;
     width: 100vw;
     font-family: 'Dancing Script', cursive;
+    margin-top: 3px;
 }
 
 h1{
@@ -23,7 +24,7 @@ h1{
 
 body {
     padding: 0;
-    margin:0;
+    margin-top: 10px;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
@@ -56,6 +57,23 @@ body {
 #text {
     font-size: 20px;
     color: lightgoldenrodyellow;
+}
+
+#num-of-clicks {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 20px;
+    text-overflow: clip;
+    inline-size: 200px;
+    align-content: center;
+    margin:0;
+}
+
+.num-of-clicks-div {
+    background:  transparent;
+    border-radius: 20px;
+    height: 10vh;
+    text-align: center;
+    box-shadow: 0 0 10px 10px lightgoldenrodyellow; 
 }
 
 .instructions-p {
