@@ -91,7 +91,8 @@ document.querySelector('.puzzle-mat').style.visibility = 'hidden'
 
 document.querySelector('.puzzle-completed').style.visibility = 'hidden'
 
-document.querySelector('#reference-img').style.visibility = 'hidden'
+// document.querySelector('#reference-img').style.visibility = 'hidden'
+document.querySelector('#reference-img').style.display = 'none'
 
 
 document.querySelector('.start-game-btn').addEventListener('click', () => {
@@ -99,7 +100,7 @@ document.querySelector('.start-game-btn').addEventListener('click', () => {
   document.querySelector('.puzzle-mat').style.visibility = 'visible'
   document.querySelector('.start-container').remove();
   document.querySelector('.instructions').remove();
-  document.querySelector('#reference-img').style.visibility = 'visible'
+  document.querySelector('#reference-img').style.display = 'block'
   const picturePuzzle = new PicturePuzzle(document.querySelector('#puzzle-wrapper'),imgPuzzle, imgDimmension);})
 
  
