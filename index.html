@@ -14,16 +14,9 @@
 
         <h1>One piece at a time ...</h1> 
 
-        <div class="start-container">
-            <div id="text">Select your difficulty level:</div>
-            <div id="difficulty-level">
-                <button class="diff-level" value=3 onclick="selectPuzzleDimmension(this.value)">3x3 - easy peasy</button>
-                <button class="diff-level" value=5 onclick="selectPuzzleDimmension(this.value)">5x5 - I like the challenge</button>
-                <button class="diff-level" value=10 onclick="selectPuzzleDimmension(this.value)">10x10 - I'm a puzzle expert</button>
-            </div>
-            <button class="start-game-btn active">I'm ready!</button>
-            <p id="num-of-clicks"></p>
-        </div>
+        
+        <p id="num-of-clicks"></p>
+        
 
        
     </header>
@@ -33,6 +26,33 @@
 
 <body id='body'>
     
+    <div class="instructions">
+        <p class="instructions-p">
+            Welcome to <em>One piece at a time</em>. I love that you are here.
+            <br>
+            To build a puzzle you have to select a dimmension and an image.
+            <br> Have fun! &#x1F33C;
+        </p>
+    </div>
+
+    <div class="start-container">
+        <div id="text">Select your difficulty level:</div>
+        <div id="difficulty-level">
+            <button class="diff-level buttons" value="3" onclick="selectPuzzleDimmension(this.value)">3x3 - easy peasy</button>
+            <button class="diff-level buttons" value="5" onclick="selectPuzzleDimmension(this.value)">5x5 - I like the challenge</button>
+            <button class="diff-level buttons" value="10" onclick="selectPuzzleDimmension(this.value)">10x10 - I'm a puzzle expert</button>
+        </div>
+        <div id="text">Select your image:</div>
+        <div id="puzzle-img">
+            <button class="puzzle-img-val buttons butterfly" value="butterfly" onclick="selectPuzzleImg(this.value)">Butterfly</button>
+            <button class="puzzle-img-val buttons miami" value="miami" onclick="selectPuzzleImg(this.value)">Miami Skyline</button>
+            <button class="puzzle-img-val buttons groovy" value="groovy" onclick="selectPuzzleImg(this.value)">Groovy</button>
+            <button class="puzzle-img-val buttons dancing" value="dance" onclick="selectPuzzleImg(this.value)">Dancing</button>
+        </div>
+        <button class="start-game-btn active">I'm ready!</button>
+    </div>
+
+
     <div class="puzzle-space">
         <div class="puzzle-mat">
             <div id="puzzle-wrapper"></div>
@@ -40,13 +60,15 @@
         
         
     
-        <section>
-            <img src="./images/Danaidae_Monarch_John_Jackman-M.jpeg" alt="" >
+        <section id='reference-img'>
+        
         </section>
     </div>
+
+  
     
     
-    <script src="./puzzle.js"></script> 
+    <script src="./puzzle2.js"></script> 
     <script src="./cells.js"></script>
     <script src="./main.js"></script>
    

@@ -44,16 +44,21 @@
 
 
 Game add-ons to-do:
- 1. removing space between divs when won
- 2. Get difficulty levels to work
+
+ 2. Get difficulty levels to work - completed
  3. UI:
-    - get puzzle completed picture
+    - get puzzle completed picture - completed
  3. UI:
-    - background image
-    - start button
-    - difficulty level
+    - background image - done
+    - start button - done 
+    - difficulty level - done
     
 
+To fix:
+1. button highlight when selected
 
-    input boxes of tyoe pazzle
+
+Juices:
+1. choose picture
+2. mandalas with canvas at the beginning & the end
 
